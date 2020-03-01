@@ -1,0 +1,32 @@
+ <!-- <table border="1">     
+   <tr>
+    <th>Emp code</th>
+    <th>Emp name</th>
+    <th>salary</th>
+    <th>date of birth</th>    // predefind pipes uses
+  </tr>
+  <tr *ngFor="let employee of employees">
+  <td>{{employee.code}}</td>
+  <td>{{employee.name|uppercase}}</td>
+  <td>{{employee.salary}}</td>
+  <td>{{employee.dob}}</td>
+  </tr> -->
+
+
+<!-- //user define pipes -->
+<h4>Custom pipes Examples</h4>
+<table border="1">
+  <tr>
+    <th>Emp code</th>
+    <th>Emp name</th>
+    <th>salary</th>
+    <th>date of birth</th>  
+  </tr>
+  <tr *ngFor="let employee of employees">
+    <td>{{employee.code}}</td>
+    <td>{{employee.name|mypipe:employee.gender}}</td>   <!-- call pipe in the name check gender-->
+    <td>{{employee.salary}}</td>
+    <td>{{employee.dob}}</td>
+    <td>{{employee.gender}}</td>
+  </tr>
+  </table>
